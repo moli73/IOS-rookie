@@ -34,11 +34,18 @@
     
     if(seconds == 0) {
         [timer invalidate];
+        //[self setupGame];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Time is up!"
+                                                        message:[NSString stringWithFormat:@"You score %i points", count]
+                                                       delegate:self
+                                              cancelButtonTitle:@"Play again"
+                                              otherButtonTitles:nil];
+        [alert show];
     }
 }
 
 - (void)setupGame {
-    seconds = 30;
+    seconds = 10;
     count = 0;
     
     timerLabel.text = [NSString stringWithFormat:@"Time: %i", seconds];
@@ -57,5 +64,5 @@
     count++;
     
     scoreLabel.text = [NSString stringWithFormat: @"Score:\n%i", count];
-}
+    }
 @end
