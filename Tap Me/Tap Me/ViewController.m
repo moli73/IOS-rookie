@@ -19,6 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    [self setupGame];
 }
 
 
@@ -27,7 +28,34 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)subtractTime {
+    seconds--;
+    timerLabel.text = [NSString stringWithFormat:@"Time: %i", seconds];
+    
+    if(seconds == 0) {
+        [timer invalidate];
+    }
+}
+
+- (void)setupGame {
+    seconds = 30;
+    count = 0;
+    
+    timerLabel.text = [NSString stringWithFormat:@"Time: %i", seconds];
+    scoreLabel.text = [NSString stringWithFormat:@"Score:\n%i", count];
+    
+    timer = [NSTimer scheduledTimerWithTimeInterval:1.0f
+                                             target:self
+                                           selector:@selector(subtractTime)
+                                           userInfo:nil
+                                            repeats:YES];
+    
+}
+
 - (IBAction)buttonPressed {
-    scoreLabel.text = @"Pressed!";
+    
+    count++;
+    
+    scoreLabel.text = [NSString stringWithFormat: @"Score:\n%i", count];
 }
 @end

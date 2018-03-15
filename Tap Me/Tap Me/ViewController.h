@@ -12,7 +12,9 @@
     IBOutlet UILabel *scoreLabel;
     IBOutlet UILabel *timerLabel;
     
-
+    NSInteger count;
+    NSInteger seconds;
+    NSTimer *timer;
 }
 - (IBAction)buttonPressed;
 @end
