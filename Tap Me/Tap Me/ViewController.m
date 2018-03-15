@@ -60,9 +60,12 @@
 }
 
 - (IBAction)buttonPressed {
-    
     count++;
     
     scoreLabel.text = [NSString stringWithFormat: @"Score:\n%i", count];
-    }
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    [self setupGame];
+}
 @end
