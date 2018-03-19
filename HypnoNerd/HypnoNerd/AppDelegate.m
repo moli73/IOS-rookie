@@ -1,13 +1,13 @@
 //
 //  AppDelegate.m
-//  Hypnosister
+//  HypnoNerd
 //
-//  Created by Mo Li on 3/16/18.
+//  Created by Mo Li on 3/19/18.
 //  Copyright © 2018 Mo Li. All rights reserved.
 //
 
 #import "AppDelegate.h"
-#import "BNRHypnosisView.h"
+#import "BNRHypnosisViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,51 +17,15 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
-    NSLog(@"Hello World!");
-
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    // Override point for customization after application launch.
     
-    //-----------------------------------------------------------------------------------------
-    //解决该问题的代码
-    NSArray *windows = [[UIApplication sharedApplication] windows];
-    for(UIWindow *window in windows) {
-        if(window.rootViewController == nil){
-            UIViewController *vc = [[UIViewController alloc]initWithNibName:nil
-                                                                     bundle:nil];
-            window.rootViewController = vc;
-        }
-    }
-    //解决该问题的代码
-    //----------------------------------------------------------------------------------------
+    BNRHypnosisViewController *hvc = [[BNRHypnosisViewController alloc] init];
     
-    CGRect screenRects = self.window.bounds;
-    CGRect bigRect = screenRects;
-    bigRect.size.width *= 2.0;
-//    bigRect.size.height *= 2.0;
-    
-    // Create a screen-sized scroll view and add it to the window
-    UIScrollView *scollView = [[UIScrollView alloc] initWithFrame:screenRects];
-//    scollView.pagingEnabled = YES;
-    [self.window addSubview:scollView];
-    
-    // Create a super-sized hypnosis view and add it to the scoll view
-//    screenRects.origin.x += screenRects.size.width / 2.0;
-    BNRHypnosisView *hypnosisView = [[BNRHypnosisView alloc] initWithFrame:screenRects];
-    [scollView addSubview:hypnosisView];
-    
-    // Add a second screen-sized hypnosis view
-    screenRects.origin.x += screenRects.size.width;
-
-//    screenRects.origin.x -= screenRects.size.width;
-    BNRHypnosisView *anotherView = [[BNRHypnosisView alloc] initWithFrame:screenRects];
-    [scollView addSubview:anotherView];
-    
-    // Tell the scroll viewhow big its content area is
-    scollView.contentSize = bigRect.size;
+    self.window.rootViewController = hvc;
     
     self.window.backgroundColor = [UIColor whiteColor];
-    [self.window makeKeyAndVisible];
+    [self.window makeKeyWindow];
     return YES;
 }
 
