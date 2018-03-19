@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:Hypnosister.xcodeproj">
+      location = "group:/Users/moli/Documents/online/IOS/code/Hypnosister/shoe.png">
+   </FileRef>
+   <FileRef
+      location = "self:">
    </FileRef>
 </Workspace>

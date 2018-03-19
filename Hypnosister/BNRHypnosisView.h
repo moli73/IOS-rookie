@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface BNRHypnosisView : UIView
-//@property (nonatomic) CGRect frame;
+
 @end

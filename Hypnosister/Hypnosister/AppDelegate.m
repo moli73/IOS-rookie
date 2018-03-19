@@ -35,12 +35,30 @@
     //解决该问题的代码
     //----------------------------------------------------------------------------------------
     
-    //add first subview
-//    CGRect firstFrame = CGRectMake(160, 240, 100, 150);
-    CGRect firstFrame = self.window.bounds;
-    BNRHypnosisView *firstView = [[BNRHypnosisView alloc] initWithFrame:firstFrame];
+    CGRect screenRects = self.window.bounds;
+    CGRect bigRect = screenRects;
+    bigRect.size.width *= 2.0;
+//    bigRect.size.height *= 2.0;
+    
+    // Create a screen-sized scroll view and add it to the window
+    UIScrollView *scollView = [[UIScrollView alloc] initWithFrame:screenRects];
+    scollView.pagingEnabled = NO;
+    [self.window addSubview:scollView];
+    
+    // Create a super-sized hypnosis view and add it to the scoll view
+//    screenRects.origin.x += screenRects.size.width / 2.0;
+    BNRHypnosisView *hypnosisView = [[BNRHypnosisView alloc] initWithFrame:screenRects];
+    [scollView addSubview:hypnosisView];
+    
+    // Add a second screen-sized hypnosis view
+    screenRects.origin.x += screenRects.size.width;
 
-    [self.window addSubview:firstView];
+//    screenRects.origin.x -= screenRects.size.width;
+    BNRHypnosisView *anotherView = [[BNRHypnosisView alloc] initWithFrame:screenRects];
+    [scollView addSubview:anotherView];
+    
+    // Tell the scroll viewhow big its content area is
+    scollView.contentSize = bigRect.size;
     
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];

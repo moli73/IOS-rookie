@@ -8,13 +8,18 @@
 
 #import "BNRHypnosisView.h"
 
+@interface BNRHypnosisView()
+@property (strong, nonatomic) UIColor *circleColor;
+@end
+
 @implementation BNRHypnosisView
 
 - (instancetype)initWithFrame:(CGRect) frame {
     self = [super initWithFrame:frame];
-    
+
     if(self) {
         self.backgroundColor = [UIColor clearColor];
+        self.circleColor = [UIColor lightGrayColor];
     }
     
     return self;
@@ -33,6 +38,10 @@
     float maxRadius = hypot(bounds.size.width, bounds.size.height) / 2.0;
     
     UIBezierPath *path = [[UIBezierPath alloc] init];
+    
+    // add image png file
+//    UIImage *shoe = [UIImage imageNamed:@"logo.png"];
+//    [shoe drawInRect:bounds];
    
     for(float radius = maxRadius; radius > 0; radius -= 20) {
         //move to next circle start point
@@ -46,9 +55,36 @@
     
     path.lineWidth = 10.0;
     
-    [[UIColor lightGrayColor] setStroke];
+    [self.circleColor setStroke];
     [path stroke];
 
+}
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    
+//    self.window.userInteractionEnabled = YES;
+//    self.window.multipleTouchEnabled = YES;
+//    [super touchesBegan:touches withEvent:event];
+
+    NSLog(@"fsdfsd");
+    NSLog(@"%@ was touched", self);
+    
+    float red = (arc4random() % 100) / 100.0;
+    float green = (arc4random() % 100) / 100.0;
+    float blue = (arc4random() % 100) / 100.0;
+    
+    UIColor *randomColor = [UIColor colorWithRed:red
+                                           green:green
+                                            blue:blue
+                                           alpha:1.0];
+    self.circleColor = randomColor;
+}
+
+- (void)setCircleColor:(UIColor *)circleColor {
+    
+    _circleColor = circleColor;
+    [self setNeedsDisplay];
+    
 }
 
 @end
