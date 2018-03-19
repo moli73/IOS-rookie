@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		E5A70AFF206018AA008C3358 /* BNRHypnosisViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A70AFE206018AA008C3358 /* BNRHypnosisViewController.m */; };
+		E5A70B0620604190008C3358 /* BNRReminderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A70B0520604190008C3358 /* BNRReminderViewController.m */; };
+		E5A70B0820604302008C3358 /* BNRReminderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5A70B0720604302008C3358 /* BNRReminderViewController.xib */; };
 		E5FDA9B42060177C00103B3A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E5FDA9B32060177C00103B3A /* AppDelegate.m */; };
 		E5FDA9B72060177C00103B3A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5FDA9B62060177C00103B3A /* ViewController.m */; };
 		E5FDA9BA2060177C00103B3A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5FDA9B82060177C00103B3A /* Main.storyboard */; };
@@ -20,6 +22,9 @@
 /* Begin PBXFileReference section */
 		E5A70AFD206018AA008C3358 /* BNRHypnosisViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BNRHypnosisViewController.h; sourceTree = "<group>"; };
 		E5A70AFE206018AA008C3358 /* BNRHypnosisViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BNRHypnosisViewController.m; sourceTree = "<group>"; };
+		E5A70B0420604190008C3358 /* BNRReminderViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BNRReminderViewController.h; sourceTree = "<group>"; };
+		E5A70B0520604190008C3358 /* BNRReminderViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BNRReminderViewController.m; sourceTree = "<group>"; };
+		E5A70B0720604302008C3358 /* BNRReminderViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BNRReminderViewController.xib; sourceTree = "<group>"; };
 		E5FDA9AF2060177C00103B3A /* HypnoNerd.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HypnoNerd.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5FDA9B22060177C00103B3A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E5FDA9B32060177C00103B3A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -64,6 +69,9 @@
 		E5FDA9B12060177C00103B3A /* HypnoNerd */ = {
 			isa = PBXGroup;
 			children = (
+				E5A70B0420604190008C3358 /* BNRReminderViewController.h */,
+				E5A70B0520604190008C3358 /* BNRReminderViewController.m */,
+				E5A70B0720604302008C3358 /* BNRReminderViewController.xib */,
 				E5FDA9CA206017D600103B3A /* BNRHypnosisView.h */,
 				E5FDA9C8206017D300103B3A /* BNRHypnosisView.m */,
 				E5A70AFD206018AA008C3358 /* BNRHypnosisViewController.h */,
@@ -140,6 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E5FDA9BF2060177C00103B3A /* LaunchScreen.storyboard in Resources */,
+				E5A70B0820604302008C3358 /* BNRReminderViewController.xib in Resources */,
 				E5FDA9BC2060177C00103B3A /* Assets.xcassets in Resources */,
 				E5FDA9BA2060177C00103B3A /* Main.storyboard in Resources */,
 			);
@@ -153,6 +162,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E5FDA9B72060177C00103B3A /* ViewController.m in Sources */,
+				E5A70B0620604190008C3358 /* BNRReminderViewController.m in Sources */,
 				E5FDA9C22060177C00103B3A /* main.m in Sources */,
 				E5FDA9C9206017D300103B3A /* BNRHypnosisView.m in Sources */,
 				E5FDA9B42060177C00103B3A /* AppDelegate.m in Sources */,
