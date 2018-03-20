@@ -28,8 +28,8 @@
 		E537CA9D205C42CF007EB605 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E537CA9F205C42CF007EB605 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E537CAA0205C42CF007EB605 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		E537CAA7205C4414007EB605 /* BNRHypnosisView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BNRHypnosisView.h; sourceTree = "<group>"; };
 		E537CAA8205C4414007EB605 /* BNRHypnosisView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BNRHypnosisView.m; sourceTree = "<group>"; };
+		E5A70B0020603EF9008C3358 /* BNRHypnosisView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BNRHypnosisView.h; path = ../../HypnoNerd/HypnoNerd/BNRHypnosisView.h; sourceTree = "<group>"; };
 		E5FDA9A4205EB7E200103B3A /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -48,8 +48,6 @@
 			isa = PBXGroup;
 			children = (
 				E5FDA9A4205EB7E200103B3A /* logo.png */,
-				E537CAA7205C4414007EB605 /* BNRHypnosisView.h */,
-				E537CAA8205C4414007EB605 /* BNRHypnosisView.m */,
 				E537CA90205C42CF007EB605 /* Hypnosister */,
 				E537CA8F205C42CF007EB605 /* Products */,
 			);
@@ -66,6 +64,8 @@
 		E537CA90205C42CF007EB605 /* Hypnosister */ = {
 			isa = PBXGroup;
 			children = (
+				E5A70B0020603EF9008C3358 /* BNRHypnosisView.h */,
+				E537CAA8205C4414007EB605 /* BNRHypnosisView.m */,
 				E537CA91205C42CF007EB605 /* AppDelegate.h */,
 				E537CA92205C42CF007EB605 /* AppDelegate.m */,
 				E537CA94205C42CF007EB605 /* ViewController.h */,
