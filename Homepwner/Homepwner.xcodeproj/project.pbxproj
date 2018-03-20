@@ -14,6 +14,8 @@
 		E5A70B2A20616809008C3358 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5A70B2820616809008C3358 /* LaunchScreen.storyboard */; };
 		E5A70B2D20616809008C3358 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A70B2C20616809008C3358 /* main.m */; };
 		E5A70B3520616F09008C3358 /* BNRItemsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A70B3420616F09008C3358 /* BNRItemsViewController.m */; };
+		E5A70B4C206174BE008C3358 /* BNRItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A70B4B206174BE008C3358 /* BNRItem.m */; };
+		E5A70B4F20619334008C3358 /* BNRItemStore.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A70B4E20619334008C3358 /* BNRItemStore.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,8 +29,12 @@
 		E5A70B2920616809008C3358 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E5A70B2B20616809008C3358 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E5A70B2C20616809008C3358 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		E5A70B3320616F09008C3358 /* BNRItemsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = BNRItemsViewController.h; path = Homepwner/BNRItemsViewController.h; sourceTree = "<group>"; };
-		E5A70B3420616F09008C3358 /* BNRItemsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = BNRItemsViewController.m; path = Homepwner/BNRItemsViewController.m; sourceTree = "<group>"; };
+		E5A70B3320616F09008C3358 /* BNRItemsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BNRItemsViewController.h; sourceTree = "<group>"; };
+		E5A70B3420616F09008C3358 /* BNRItemsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BNRItemsViewController.m; sourceTree = "<group>"; };
+		E5A70B4A206174BE008C3358 /* BNRItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRItem.h; sourceTree = "<group>"; };
+		E5A70B4B206174BE008C3358 /* BNRItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRItem.m; sourceTree = "<group>"; };
+		E5A70B4D20619334008C3358 /* BNRItemStore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BNRItemStore.h; sourceTree = "<group>"; };
+		E5A70B4E20619334008C3358 /* BNRItemStore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BNRItemStore.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,8 +51,6 @@
 		E5A70B1120616809008C3358 = {
 			isa = PBXGroup;
 			children = (
-				E5A70B3320616F09008C3358 /* BNRItemsViewController.h */,
-				E5A70B3420616F09008C3358 /* BNRItemsViewController.m */,
 				E5A70B1C20616809008C3358 /* Homepwner */,
 				E5A70B1B20616809008C3358 /* Products */,
 			);
@@ -63,8 +67,14 @@
 		E5A70B1C20616809008C3358 /* Homepwner */ = {
 			isa = PBXGroup;
 			children = (
-				E5A70B1D20616809008C3358 /* AppDelegate.h */,
+				E5A70B4A206174BE008C3358 /* BNRItem.h */,
+				E5A70B4B206174BE008C3358 /* BNRItem.m */,
+				E5A70B4D20619334008C3358 /* BNRItemStore.h */,
+				E5A70B4E20619334008C3358 /* BNRItemStore.m */,
+				E5A70B3320616F09008C3358 /* BNRItemsViewController.h */,
+				E5A70B3420616F09008C3358 /* BNRItemsViewController.m */,
 				E5A70B1E20616809008C3358 /* AppDelegate.m */,
+				E5A70B1D20616809008C3358 /* AppDelegate.h */,
 				E5A70B2020616809008C3358 /* ViewController.h */,
 				E5A70B2120616809008C3358 /* ViewController.m */,
 				E5A70B2320616809008C3358 /* Main.storyboard */,
@@ -148,9 +158,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E5A70B2220616809008C3358 /* ViewController.m in Sources */,
+				E5A70B4C206174BE008C3358 /* BNRItem.m in Sources */,
 				E5A70B2D20616809008C3358 /* main.m in Sources */,
 				E5A70B3520616F09008C3358 /* BNRItemsViewController.m in Sources */,
 				E5A70B1F20616809008C3358 /* AppDelegate.m in Sources */,
+				E5A70B4F20619334008C3358 /* BNRItemStore.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
