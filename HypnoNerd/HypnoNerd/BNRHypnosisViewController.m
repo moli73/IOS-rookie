@@ -9,6 +9,9 @@
 #import "BNRHypnosisViewController.h"
 #import "BNRHypnosisView.h"
 
+@interface BNRHypnosisViewController () <UITextFieldDelegate>
+@end
+
 @implementation BNRHypnosisViewController
 
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
@@ -28,10 +31,27 @@
 
 - (void)loadView {
     //  Create a view
-    BNRHypnosisView *backgroundView = [[BNRHypnosisView alloc] init];
+    CGRect frame = [UIScreen mainScreen].bounds;
+    BNRHypnosisView *backgroundView = [[BNRHypnosisView alloc] initWithFrame:frame];
     
+    CGRect textFieldRect = CGRectMake(40, 70, 240, 30);
+    UITextField *textField = [[UITextField alloc] initWithFrame:textFieldRect];
+    
+    // Setting the border style on the text will allow us to see it more easily
+    textField.borderStyle = UITextBorderStyleRoundedRect;
+    textField.placeholder = @"Hypnotize me";
+    textField.returnKeyType = UIReturnKeyDone;
+    
+    textField.delegate = self;
+    
+    [backgroundView addSubview:textField];
     // Set it as the view of this view controller
     self.view = backgroundView;
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    NSLog(@"%@", textField.text);
+    return YES;
 }
 
 - (void)viewDidLoad {
