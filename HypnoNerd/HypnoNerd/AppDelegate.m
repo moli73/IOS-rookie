@@ -27,7 +27,8 @@
     NSBundle *appBundle = [NSBundle mainBundle];
     
     // Look in the appBundle for the file BNRReminderViewController.xib
-    BNRReminderViewController *rvc = [[BNRReminderViewController alloc] initWithNibName:@"BNRReminderViewController" bundle:appBundle];
+//    BNRReminderViewController *rvc = [[BNRReminderViewController alloc] initWithNibName:@"BNRReminderViewController" bundle:appBundle];
+    BNRReminderViewController *rvc = [[BNRReminderViewController alloc] init];
     
 //    self.window.rootViewController = hvc;
 //    self.window.rootViewController = rvc;
