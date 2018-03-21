@@ -16,6 +16,7 @@
 		E5A70B3520616F09008C3358 /* BNRItemsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A70B3420616F09008C3358 /* BNRItemsViewController.m */; };
 		E5A70B4C206174BE008C3358 /* BNRItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A70B4B206174BE008C3358 /* BNRItem.m */; };
 		E5A70B4F20619334008C3358 /* BNRItemStore.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A70B4E20619334008C3358 /* BNRItemStore.m */; };
+		E5A70B512061E9DE008C3358 /* HeadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5A70B502061E9DE008C3358 /* HeadView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		E5A70B4B206174BE008C3358 /* BNRItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRItem.m; sourceTree = "<group>"; };
 		E5A70B4D20619334008C3358 /* BNRItemStore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BNRItemStore.h; sourceTree = "<group>"; };
 		E5A70B4E20619334008C3358 /* BNRItemStore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BNRItemStore.m; sourceTree = "<group>"; };
+		E5A70B502061E9DE008C3358 /* HeadView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeadView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 				E5A70B4E20619334008C3358 /* BNRItemStore.m */,
 				E5A70B3320616F09008C3358 /* BNRItemsViewController.h */,
 				E5A70B3420616F09008C3358 /* BNRItemsViewController.m */,
+				E5A70B502061E9DE008C3358 /* HeadView.xib */,
 				E5A70B1E20616809008C3358 /* AppDelegate.m */,
 				E5A70B1D20616809008C3358 /* AppDelegate.h */,
 				E5A70B2020616809008C3358 /* ViewController.h */,
@@ -146,6 +149,7 @@
 			files = (
 				E5A70B2A20616809008C3358 /* LaunchScreen.storyboard in Resources */,
 				E5A70B2720616809008C3358 /* Assets.xcassets in Resources */,
+				E5A70B512061E9DE008C3358 /* HeadView.xib in Resources */,
 				E5A70B2520616809008C3358 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
