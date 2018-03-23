@@ -17,6 +17,8 @@
 		E5A70B4C206174BE008C3358 /* BNRItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A70B4B206174BE008C3358 /* BNRItem.m */; };
 		E5A70B4F20619334008C3358 /* BNRItemStore.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A70B4E20619334008C3358 /* BNRItemStore.m */; };
 		E5A70B5320620111008C3358 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5A70B5220620111008C3358 /* HeaderView.xib */; };
+		E5A70B5720644F2F008C3358 /* BNRDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A70B5520644F2F008C3358 /* BNRDetailViewController.m */; };
+		E5A70B5820644F2F008C3358 /* BNRDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5A70B5620644F2F008C3358 /* BNRDetailViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,9 @@
 		E5A70B4D20619334008C3358 /* BNRItemStore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BNRItemStore.h; sourceTree = "<group>"; };
 		E5A70B4E20619334008C3358 /* BNRItemStore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BNRItemStore.m; sourceTree = "<group>"; };
 		E5A70B5220620111008C3358 /* HeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
+		E5A70B5420644F2F008C3358 /* BNRDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BNRDetailViewController.h; sourceTree = "<group>"; };
+		E5A70B5520644F2F008C3358 /* BNRDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BNRDetailViewController.m; sourceTree = "<group>"; };
+		E5A70B5620644F2F008C3358 /* BNRDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BNRDetailViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +75,9 @@
 			isa = PBXGroup;
 			children = (
 				E5A70B5220620111008C3358 /* HeaderView.xib */,
+				E5A70B5420644F2F008C3358 /* BNRDetailViewController.h */,
+				E5A70B5520644F2F008C3358 /* BNRDetailViewController.m */,
+				E5A70B5620644F2F008C3358 /* BNRDetailViewController.xib */,
 				E5A70B4A206174BE008C3358 /* BNRItem.h */,
 				E5A70B4B206174BE008C3358 /* BNRItem.m */,
 				E5A70B4D20619334008C3358 /* BNRItemStore.h */,
@@ -151,6 +159,7 @@
 				E5A70B2720616809008C3358 /* Assets.xcassets in Resources */,
 				E5A70B2520616809008C3358 /* Main.storyboard in Resources */,
 				E5A70B5320620111008C3358 /* HeaderView.xib in Resources */,
+				E5A70B5820644F2F008C3358 /* BNRDetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,6 +173,7 @@
 				E5A70B2220616809008C3358 /* ViewController.m in Sources */,
 				E5A70B4C206174BE008C3358 /* BNRItem.m in Sources */,
 				E5A70B2D20616809008C3358 /* main.m in Sources */,
+				E5A70B5720644F2F008C3358 /* BNRDetailViewController.m in Sources */,
 				E5A70B3520616F09008C3358 /* BNRItemsViewController.m in Sources */,
 				E5A70B1F20616809008C3358 /* AppDelegate.m in Sources */,
 				E5A70B4F20619334008C3358 /* BNRItemStore.m in Sources */,

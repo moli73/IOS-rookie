@@ -20,7 +20,12 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
     BNRItemsViewController *itemsViewController = [[BNRItemsViewController alloc] init];
-    self.window.rootViewController = itemsViewController;
+    
+    // Create NavagationController
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:itemsViewController];
+    // Place naviagtion controller's view in window hierarchy
+    self.window.rootViewController = navController;
+    
     
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyWindow];
