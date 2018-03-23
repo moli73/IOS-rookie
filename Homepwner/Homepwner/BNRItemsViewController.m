@@ -11,21 +11,26 @@
 #import "BNRItemStore.h"
 #import "BNRDetailViewController.h"
 
-@interface BNRItemsViewController()
-
-@property (nonatomic, strong) IBOutlet UIView *headerView;
-
-@end
-
 @implementation BNRItemsViewController
 
 - (instancetype)init {
     self = [super initWithStyle:UITableViewStylePlain];
-//    if(self) {
-//        for(int i = 0; i < 5; i++) {
-//            [[BNRItemStore sharedStore] createItem];
-//        }
-//    }
+
+    if(self) {
+        UINavigationItem *navItem = self.navigationItem;
+        navItem.title = @"Homepwner";
+        
+        // Create a new bar button item
+        UIBarButtonItem *bbi = [[UIBarButtonItem alloc]
+                                initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
+                                target:self
+                                action:@selector(addNewItem:)];
+        
+        // Set this bar button item as the right tiem in the navigationItem
+        navItem.rightBarButtonItem = bbi;
+        
+        navItem.leftBarButtonItem = self.editButtonItem;
+    }
     return self;
 }
 
@@ -59,9 +64,6 @@
     
     [self.tableView registerClass:[UITableViewCell class]
            forCellReuseIdentifier:@"UITableViewCell"];
-    
-    UIView *header = self.headerView;
-    [self.tableView setTableHeaderView:header];
 }
 
 - (IBAction)addNewItem:(id)sender {
@@ -77,35 +79,6 @@
     [self.tableView insertRowsAtIndexPaths:@[indexPath]
                           withRowAnimation:UITableViewRowAnimationTop];
     
-}
-
-- (IBAction)toggleEditingMode:(id)sender {
-    // Check current mode
-    if(self.isEditing) {
-        // Change text of button to inform user state
-        [sender setTitle:@"Edit" forState:UIControlStateNormal];
-        
-        // Turn off editing mode
-        [self setEditing:NO animated:YES];
-    } else {
-        // Change text of button to inform user of state
-        [sender setTitle:@"Done" forState:UIControlStateNormal];
-        
-        // Enter editing mode
-        [self setEditing:YES animated:YES];
-    }
-}
-
-- (UIView *)headerView {
-    // Check if not loaded the headerView
-    if(!_headerView) {
-        // Load HeaderView.xib
-        [[NSBundle mainBundle] loadNibNamed:@"HeaderView"
-                                      owner:self
-                                    options:nil];
-    }
-    
-    return _headerView;
 }
 
 - (void)tableView:(UITableView *)tableView
@@ -140,6 +113,7 @@ forRowAtIndexPath:(NSIndexPath *)indexPath {
     // Push it onto the top of thenavigation controller's stack
     [self.navigationController pushViewController:detailViewController animated:YES];
 }
+
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
