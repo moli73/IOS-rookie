@@ -8,9 +8,9 @@
 
 #import "BNRItem.h"
 
-@interface BNRContainer : BNRItem {
-    NSMutableArray *_subitems;
-}
+@interface BNRContainer : BNRItem
+
+@property (nonatomic, strong) NSMutableArray *subitems;
 
 - (instancetype)initWithName:(NSString *)name withSubitems:(NSMutableArray *)items;
 

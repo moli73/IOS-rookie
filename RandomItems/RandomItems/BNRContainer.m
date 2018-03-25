@@ -14,11 +14,11 @@
     self = [super init];
     
     if(self) {
-        _itemName = name;
-        _subitems = items;
+        self.itemName = name;
+        self.subitems = items;
         
         for(BNRItem *item in items) {
-            _valueInDollars += item.valueInDollars;
+            self.valueInDollars += item.valueInDollars;
         }
     }
     
@@ -37,14 +37,6 @@
                      self.dateCreated];
     
     return str;
-}
-
-- (void)setSubitems:(NSMutableArray *)items {
-    self.subitems = items;
-}
-
-- (NSMutableArray *)subitems {
-    return _subitems;
 }
 
 @end
