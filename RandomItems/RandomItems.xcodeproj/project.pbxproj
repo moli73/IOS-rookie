@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		E5A70BAF2065A9D6008C3358 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A70BAE2065A9D6008C3358 /* main.m */; };
+		E5A70BB72065AE07008C3358 /* BNRItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A70BB62065AE07008C3358 /* BNRItem.m */; };
+		E5A70BBA20674265008C3358 /* BNRContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A70BB920674265008C3358 /* BNRContainer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +27,10 @@
 /* Begin PBXFileReference section */
 		E5A70BAB2065A9D6008C3358 /* RandomItems */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = RandomItems; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5A70BAE2065A9D6008C3358 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E5A70BB52065AE07008C3358 /* BNRItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BNRItem.h; sourceTree = "<group>"; };
+		E5A70BB62065AE07008C3358 /* BNRItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BNRItem.m; sourceTree = "<group>"; };
+		E5A70BB820674265008C3358 /* BNRContainer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BNRContainer.h; sourceTree = "<group>"; };
+		E5A70BB920674265008C3358 /* BNRContainer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BNRContainer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,10 @@
 			isa = PBXGroup;
 			children = (
 				E5A70BAE2065A9D6008C3358 /* main.m */,
+				E5A70BB820674265008C3358 /* BNRContainer.h */,
+				E5A70BB920674265008C3358 /* BNRContainer.m */,
+				E5A70BB52065AE07008C3358 /* BNRItem.h */,
+				E5A70BB62065AE07008C3358 /* BNRItem.m */,
 			);
 			path = RandomItems;
 			sourceTree = "<group>";
@@ -120,6 +130,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E5A70BAF2065A9D6008C3358 /* main.m in Sources */,
+				E5A70BB72065AE07008C3358 /* BNRItem.m in Sources */,
+				E5A70BBA20674265008C3358 /* BNRContainer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

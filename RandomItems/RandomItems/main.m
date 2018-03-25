@@ -7,11 +7,29 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "BNRItem.h"
+#import "BNRContainer.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        // insert code here...
-        NSLog(@"Hello, World!");
+        NSMutableArray *items = [[NSMutableArray alloc] init];
+        
+        for(int i = 0; i < 5; i++) {
+            BNRItem *item = [BNRItem randomItem];
+            [items addObject:item];
+        }
+        
+        BNRContainer *container = [[BNRContainer alloc] initWithName:@"myContainer"
+                                                        withSubitems:items];
+        NSLog(@"%@", container);
+        
+        
+        for(BNRItem *item in container.subitems) {
+            NSLog(@"%@", item);
+        }
+        
+        container = nil;
+        items = nil;
     }
     return 0;
 }
