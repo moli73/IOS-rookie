@@ -45,11 +45,29 @@
 - (void)setImage:(UIImage *)image forKey:(NSString *)key {
 //    [self.dictionary setObject:image forKey:key];
     self.dictionary[key] = image;
+    
+    NSString *imagePath = [self imagePathForKey:key];
+    // Turn image into JPEG data
+    NSData *data = UIImageJPEGRepresentation(image, 0.5);
+    [data writeToFile:imagePath atomically:YES];
 }
 
 - (UIImage *)imageForKey:(NSString *)key {
 //    return [self.dictionary objectForKey:key];
-    return self.dictionary[key];
+//    return self.dictionary[key];
+    UIImage *result = self.dictionary[key];
+    
+    if(!result) {
+        NSString *imagePath = [self imagePathForKey:key];
+        result = [UIImage imageWithContentsOfFile:imagePath];
+        if(result) {
+            self.dictionary[key] = result;
+        } else {
+            NSLog(@"Unable to find %@", [self imagePathForKey:key]);
+        }
+    }
+    
+    return result;
 }
 
 - (void)deleteImageForKey:(NSString *)key {
@@ -57,6 +75,16 @@
         return;
     }
     [self.dictionary removeObjectForKey:key];
+    
+    NSString *imagePath = [self imagePathForKey:key];
+    [[NSFileManager defaultManager] removeItemAtPath:imagePath error:nil];
 }
+
+- (NSString *)imagePathForKey:(NSString *)key {
+    NSArray *documentDirectories = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentDirectory = [documentDirectories firstObject];
+    return [documentDirectory stringByAppendingString:key];
+}
+
 
 @end
